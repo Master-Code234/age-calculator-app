@@ -1,0 +1,126 @@
+/* -- CSS Reset -- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* -- Colors -- */
+:root {
+  --primary-purple: hsl(259, 100%, 65%);
+  --primary-red: hsl(0, 100%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
+}
+
+/* -- General Styles -- */
+body {
+  background-color: var(--off-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* -- Calculator Styles -- */
+.calculator-container {
+  background-color: var(--white);
+  padding: 4rem;
+  width: 800px;
+  border-radius: 1.5rem 1.5rem 10rem;
+}
+
+.container {
+  display: flex;
+  gap: 2rem;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-label {
+  color: var(--smokey-grey);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.column-input {
+  border: var(--light-grey) 1px solid;
+  font-size: 32px;
+  max-width: 150px;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  padding: 0.6rem 1.75rem;
+}
+
+.column-input:focus {
+  outline: 1px solid var(--primary-purple);
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row-1 {
+  flex: 100%;
+}
+
+.divider {
+  border-color: var(--light-grey);
+  opacity: 40%;
+}
+
+.calculate-button {
+  background-color: var(--primary-purple);
+  border: none;
+  border-radius: 90%;
+  width: 90px;
+  height: 90px;
+  cursor: pointer;
+}
+
+.calculate-button:hover {
+  background-color: var(--off-black);
+  transition: 300ms ease-in-out;
+}
+
+.age-info-container {
+  line-height: 1;
+}
+
+.age-info-h2 {
+  font-size: 100px;
+  font-style: italic;
+}
+
+.age-info-span {
+  color: var(--primary-purple);
+  margin: 0 0.3rem;
+}
+
+/* -- Error Styles -- */
+.input-error {
+  border: 1px solid var(--primary-red);
+}
+
+.input-error:focus {
+  outline: none;
+}
+
+.label-error {
+  color: var(--primary-red);
+}
+
+.error-msg {
+  color: var(--primary-red);
+  font-style: italic;
+}
