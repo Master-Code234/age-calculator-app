@@ -6,6 +6,7 @@ This is a solution to the age calculator app challenge on Frontend Mentor.
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
   - [Links](#links)
 
 ## Overview
@@ -17,6 +18,10 @@ This is a solution to the age calculator app challenge on Frontend Mentor.
 - Handle edge cases such as leap years and invalid/future dates
 - Display the calculated age in years, months, and days
 - Build a clean, accessible user interface following the provided design
+
+### Screenshot
+
+![Age Calculator App Screenshot](./assets/images/age-calculator-app-screenshot.png)
 
 ### Links
 
