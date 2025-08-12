@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="A responsive age calculator app that calculates your age in years, months, and days from your birth date.">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+  <script defer src="./script.js"></script>
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+    rel="stylesheet">
+  <title>Frontend Mentor | Age calculator app</title>
+</head>
+
+<body>
+  <main class="age-calculator">
+    <form class="age-calculator__form" id="age-form" novalidate>
+      <fieldset class="age-calculator__inputs">
+        <div class="age-calculator__input-group">
+          <label for="day" class="age-calculator__label">Day</label>
+          <input class="age-calculator__input" type="text" id="day" name="day" placeholder="DD" maxlength="2"
+            inputmode="numeric" autocomplete="off" required />
+          <small class="age-calculator__error" id="error-day"></small>
+        </div>
+
+        <div class="age-calculator__input-group">
+          <label for="month" class="age-calculator__label">Month</label>
+          <input class="age-calculator__input" type="text" id="month" name="month" placeholder="MM" maxlength="2"
+            inputmode="numeric" autocomplete="off" required />
+          <small class="age-calculator__error" id="error-month"></small>
+        </div>
+
+        <div class="age-calculator__input-group">
+          <label for="year" class="age-calculator__label">Year</label>
+          <input class="age-calculator__input" type="text" id="year" name="year" placeholder="YYYY" maxlength="4"
+            inputmode="numeric" autocomplete="off" required />
+          <small class="age-calculator__error" id="error-year"></small>
+        </div>
+      </fieldset>
+
+      <div class="age-calculator__divider">
+        <hr class="age-calculator__line" />
+        <button class="age-calculator__submit" type="submit" aria-label="Calculate age">
+          <img src="assets/images/icon-arrow.svg" alt="" class="age-calculator__icon" />
+        </button>
+      </div>
+    </form>
+
+    <section class="age-calculator__results">
+      <p class="age-calculator__result">
+        <span class="age-calculator__value" id="result-years">--</span>
+        years
+      </p>
+      <p class="age-calculator__result">
+        <span class="age-calculator__value" id="result-months">--</span>
+        months
+      </p>
+      <p class="age-calculator__result">
+        <span class="age-calculator__value" id="result-days">--</span>
+        days
+      </p>
+    </section>
+  </main>
+</body>
+
+</html>

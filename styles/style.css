@@ -1,0 +1,204 @@
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font-family: "Poppins", sans-serif;
+  --font-size-xs: 0.625rem;
+  --font-size-sm: 0.75rem;
+  --font-size-md: 1.25rem;
+  --font-size-lg: 2.5rem;
+  --font-size-xl: 4.5rem;
+
+  /* Colors */
+  --purple-500: hsl(259, 100%, 65%);
+  --red-400: hsl(0, 100%, 67%);
+  --white: hsl(0, 100%, 100%);
+  --grey-100: hsl(0, 0%, 94%);
+  --grey-200: hsl(0, 0%, 86%);
+  --grey-500: hsl(0, 1%, 44%);
+  --black: hsl(0, 0%, 8%);
+
+  --spacing-sm: 0.25rem;
+  --spacing-md: 0.5rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2.5rem;
+
+  --card-radius-mobile: 1rem 1rem 5rem 1rem;
+  --card-radius-desktop: 1.5rem 1.5rem 9rem 1.5rem;
+  --radius-sm: 0.5rem;
+
+  --shadow-sm: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--grey-100);
+  color: var(--black);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Mobile Styles */
+.age-calculator {
+  background-color: var(--white);
+  padding: 2.5rem 1rem;
+  border-radius: var(--card-radius-mobile);
+  width: 100%;
+  max-width: 20rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.age-calculator__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.age-calculator__inputs {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
+  border: none;
+}
+
+.age-calculator__input-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.age-calculator__label {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--grey-500);
+  letter-spacing: 0.1em;
+  margin-bottom: var(--spacing-md);
+}
+
+.age-calculator__input {
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  padding: 0.65rem;
+  border: 1px solid var(--grey-200);
+  border-radius: var(--radius-sm);
+  color: var(--black);
+  outline: none;
+  width: 100%;
+}
+
+.age-calculator__input:focus {
+  border-color: var(--purple-500);
+}
+
+.age-calculator__error {
+  font-size: var(--font-size-xs);
+  font-style: italic;
+  color: var(--red-400);
+  margin-top: var(--spacing-md);
+  min-height: 1rem;
+}
+
+.age-calculator__divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: var(--spacing-xl);
+}
+
+.age-calculator__line {
+  border: none;
+  height: 1px;
+  background-color: var(--grey-200);
+  width: 100%;
+}
+
+.age-calculator__submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -1.5rem;
+  z-index: 2;
+  background-color: var(--purple-500);
+  border: none;
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.age-calculator__submit:hover {
+  background-color: var(--black);
+}
+
+.age-calculator__icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.age-calculator__results {
+  font-style: italic;
+  font-size: var(--font-size-lg);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.age-calculator__result {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.age-calculator__value {
+  color: var(--purple-500);
+}
+
+.age-calculator__input.input-error {
+  border-color: var(--red-400);
+}
+
+.age-calculator__label.label-error {
+  color: var(--red-400);
+}
+
+/* Desktop Styles */
+@media (min-width: 48rem) {
+  .age-calculator {
+    padding: 3rem;
+    max-width: 40rem;
+    border-radius: var(--card-radius-desktop);
+  }
+
+  .age-calculator__inputs {
+    max-width: 25rem;
+    gap: var(--spacing-lg);
+  }
+
+  .age-calculator__input {
+    padding: 1rem;
+  }
+
+  .age-calculator__results {
+    font-size: var(--font-size-xl);
+  }
+
+  .age-calculator__submit {
+    padding: 1.25rem;
+    right: 0;
+    bottom: -2rem;
+
+  }
+
+  .age-calculator__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
